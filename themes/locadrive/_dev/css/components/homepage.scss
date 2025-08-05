@@ -1,0 +1,24 @@
+#index {
+    #wrapper {
+        padding: 0;
+    }
+    .featured-products {
+        .products {
+            &.slick-slider {
+                padding: 0 35px;
+                @include media-breakpoint-up(lg) {
+                    padding: 0 50px;
+                }
+                @media only screen and (max-width: 480px) {
+                    padding: 0 !important;
+                }
+            }
+            .slick-slide {
+                padding: 0 5px;
+            }
+            .slick-list {
+                margin: 0 -5px;
+            }
+        }
+    }
+}

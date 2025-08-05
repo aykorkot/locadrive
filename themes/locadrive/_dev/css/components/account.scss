@@ -1,0 +1,173 @@
+// ========================================= //
+// Account
+// ========================================= //
+
+.page {
+    &-my-account,
+    &-addresses,
+    &-customer-account {
+        .page {
+            &-header {
+                background-color: var(--gray);
+                height: rem(200);
+                @include media-breakpoint-up(lg) {
+                    height: rem(400);
+                }
+            }
+            &-header,
+            &-footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: rem(20);
+            }
+            &-content {
+                padding: rem(20);
+                @include media-breakpoint-up(lg) {
+                    padding: rem(40);
+                }
+            }
+            &-footer {
+                border-top: rem(1) solid var(--black);
+            }
+        }
+        form {
+            @include media-breakpoint-up(lg) {
+                width: 50%;
+            }
+            [class^="col-"] {
+                width: 100%;
+                padding: 0;
+            }
+            .form {
+                &-group {
+                    margin-bottom: rem(20);
+                    @include media-breakpoint-up(lg) {
+                        margin-bottom: rem(30);
+                    }
+                }
+
+                &-control {
+                    &-label {
+                        font-size: rem(14);
+                        line-height: rem(17);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .address {
+            border: rem(1) solid var(--gray);
+            .address-footer {
+                border-color: var(--gray);
+            }
+        }
+    }
+}
+
+#authentication,
+#registration {
+    .page {
+        &-header {
+            background-color: transparent;
+            height: unset;
+            h1 {
+                color: var(--black);
+            }
+        }
+        &-header,
+        &-footer,
+        &-content {
+            display: block;
+            padding: 0;
+        }
+        &-footer {
+            border-top: 0;
+        }
+    }
+    form {
+        width: 100%;
+    }
+}
+
+#module-ps_emailalerts-account,
+#module-egwishlist-view {
+    .page {
+        &-header {
+            background-color: var(--gray);
+            height: rem(200);
+            @include media-breakpoint-up(lg) {
+                height: rem(400);
+            }
+        }
+        &-header,
+        &-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: rem(20);
+        }
+        &-content {
+            padding: rem(20);
+            @include media-breakpoint-up(lg) {
+                padding: rem(40);
+            }
+        }
+        &-footer {
+            border-top: rem(1) solid var(--black);
+        }
+    }
+}
+
+.link-item {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    min-height: rem(160);
+    height: 100%;
+    background-color: var(--beige-2);
+    color: var(--black);
+    padding: rem(20);
+    font-family: var(--Lexend);
+    font-size: rem(20);
+    font-weight: 400;
+    line-height: rem(28);
+    @extend %clipPath;
+    @include media-breakpoint-up(lg) {
+        font-size: rem(36);
+        line-height: rem(54);
+        padding: rem(40);
+        min-height: rem(300);
+    }
+    i {
+        font-size: rem(40);
+        @include media-breakpoint-up(lg) {
+            font-size: rem(60);
+        }
+    }
+    &:before,
+    &:after {
+        content: "";
+        height: rem(1);
+        position: absolute;
+        background-color: currentColor;
+        width: calc(100% - #{rem(40px)});
+        @include media-breakpoint-up(lg) {
+            width: calc(100% - #{rem(80px)});
+        }
+    }
+    &:before {
+        top: rem(20);
+        @include media-breakpoint-up(lg) {
+            top: rem(40);
+        }
+    }
+    &:after {
+        bottom: rem(20);
+        @include media-breakpoint-up(lg) {
+            bottom: rem(40);
+        }
+    }
+}

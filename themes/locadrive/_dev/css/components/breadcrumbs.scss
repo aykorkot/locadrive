@@ -1,0 +1,65 @@
+// ========================================= //
+// Breadcrumbs
+// ========================================= //
+
+.breadcrumb {
+    background: transparent;
+    padding: rem(20);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+    #category & {
+        position: unset;
+        padding-block: rem(20) rem(40);
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            padding-block: rem(40) rem(80);
+        }
+    }
+
+    #product & {
+        position: unset;
+        padding: 0;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+        .container {
+            padding: 0;
+        }
+    }
+
+    &[data-depth="1"] {
+        display: none;
+    }
+
+    ol {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    li {
+        display: inline;
+
+        &::after {
+            margin: 0 rem(2);
+            content: "/";
+            position: relative;
+            top: rem(1);
+        }
+
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+
+        a, span {
+            font-size: rem(14);
+            font-weight: 300;
+        }
+    }
+}

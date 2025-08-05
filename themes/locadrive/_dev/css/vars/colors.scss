@@ -1,0 +1,41 @@
+// ========================================= //
+// Colors
+// ========================================= //
+
+:root {
+
+    --black : #000000;
+    --black-rgb : 0, 0, 0;
+
+    --white : #ffffff;
+    --white-rgb : 255, 255, 255;
+
+    --gray : #F3F3F3;
+    --gray-1 : #D1D1D1;
+    --gray-2 : #CBCBCB;
+    --gray-3 : #707070;
+    --gray-4 : #959595;
+    --gray-5 : #A49E9E;
+    --gray-6 : #cac3bd;
+    --gray-7                       : #cccccc;
+    --gray-8                       : #DEDEDE;
+
+    --beige : #B88A56;
+    --beige-1 : #ecc190;
+    --beige-2 : #E3E0DB;
+
+    --red : #ce2325;
+
+    --purple: #32183D;
+    --purple-light: #60256F;
+
+    --green       : #38B272;
+
+
+
+    --body-background-color: var(--white);
+    --body-color: var(--black);
+    --selection-background-color: var(--black);
+    --selection-color: var(--white);
+
+}

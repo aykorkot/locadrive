@@ -1,0 +1,97 @@
+// ========================================= //
+// Login
+// ========================================= //
+
+#authentication,
+#registration {
+    #main {
+        padding: rem(20);
+        @include media-breakpoint-up(lg) {
+            padding-block: rem(40);
+        }
+    }
+    .page {
+        &-header {
+            padding-bottom: rem(30);
+            @include media-breakpoint-up(lg) {
+                padding-bottom: rem(80);
+            }
+            h1 {
+                font-family: var(--Lexend);
+                font-size: rem(30);
+                font-weight: 700;
+                line-height: rem(33);
+                letter-spacing: 0;
+                text-align: center;
+            }
+        }
+        &-content {
+            max-width: 100%;
+            padding: 0;
+            margin-bottom: 0;
+            @include media-breakpoint-up(lg) {
+                max-width: 41.66667%;
+            }
+        }
+    }
+}
+
+.login-form,
+.register-form {
+    margin: 0;
+
+    > p {
+        @include media-breakpoint-up(lg) {
+            font-size: rem(20);
+            line-height: rem(28);
+        }
+        a {
+            @extend %underline;
+        }
+    }
+
+    [class^="col-"] {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form {
+
+        &-group {
+            margin-bottom: rem(20);
+            @include media-breakpoint-up(lg) {
+                margin-bottom: rem(30);
+            }
+        }
+
+        &-control {
+            &-label {
+                font-size: rem(14);
+                line-height: rem(17);
+            }
+        }
+
+        &-footer {
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .forgot-password {
+        margin: 0 0 rem(40);
+        text-align: right;
+    }
+}
+
+.forgot-password,
+.no-account {
+    padding: 0;
+    a {
+        @extend %underline;
+    }
+}
+
+.no-account {
+    margin-top: rem(40);
+}

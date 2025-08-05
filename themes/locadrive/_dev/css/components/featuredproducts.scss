@@ -1,0 +1,20 @@
+// ========================================= //
+// Featured Products
+// ========================================= //
+
+.featured-products {
+    padding: 0 0 rem(40);
+    @include media-breakpoint-up(lg) {
+        padding: 0 0 rem(64);
+    }
+    .container {
+        padding: 0;
+    }
+    &__action {
+        padding-top: rem(30);
+        text-align: center;
+        @include media-breakpoint-up(lg) {
+            padding-top: rem(52);
+        }
+    }
+}

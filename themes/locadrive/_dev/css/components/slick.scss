@@ -1,0 +1,125 @@
+// ========================================= //
+// Slick
+// ========================================= //
+
+.slick {
+    &-initialized {
+        .slick {
+            &-slide {
+                display: block;
+            }
+        }
+    }
+    &-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        user-select: none;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+    }
+    &-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        transform: translate3d(0, 0, 0);
+    }
+    &-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translate3d(0, 0, 0);
+    }
+    &-slide {
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: rem(1);
+    }
+    &-arrow {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: rem(35);
+        height: rem(35);
+        padding: 0;
+        translate: 0 -50%;
+        cursor: pointer;
+        color: var(--black);
+        border: 0;
+        border-radius: 50%;
+        outline: none !important;
+        background: transparent url("../img/next.svg") center no-repeat;
+        background-size: 100%;
+        z-index: 1;
+        transition: var(--bezier);
+        @include media-breakpoint-up(lg) {
+            width: rem(50);
+            height: rem(50);
+        }
+
+        &[aria-disabled="true"] {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    }
+    &-prev {
+        left: 0;
+    }
+    &-next {
+        right: 0;
+        scale: -1;
+    }
+    &-dots {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(10);
+        padding-top: rem(20);
+        @include media-breakpoint-up(lg) {
+            gap: rem(12);
+            padding-top: rem(40);
+        }
+        li {
+            display: flex;
+            button {
+                background-color: var(--gray-3);
+                height: rem(2);
+                width: rem(14);
+                font-size: 0;
+                border-radius: rem(4);
+                border: 0;
+                outline: none;
+                cursor: pointer;
+                overflow: hidden;
+                @include media-breakpoint-up(lg) {
+                    height: rem(4);
+                    width: rem(20);
+                }
+            }
+            &.slick-active {
+                button {
+                    background-color: var(--beige);
+                    width: rem(42);
+                    @include media-breakpoint-up(lg) {
+                        width: rem(60);
+                    }
+                }
+                + li button {
+                    width: rem(28);
+                    @include media-breakpoint-up(lg) {
+                        width: rem(40);
+                    }
+                }
+            }
+        }
+    }
+}

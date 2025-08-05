@@ -1,0 +1,85 @@
+// ========================================= //
+// Pagination
+// ========================================= //
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: rem(40) rem(20);
+    @include media-breakpoint-up(lg) {
+        padding-block: rem(67) rem(97);
+    }
+    ul {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        gap: rem(10);
+        @include media-breakpoint-up(lg) {
+            gap: rem(16);
+        }
+        li {
+            > * {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: rem(25);
+                height: rem(25);
+                border-radius: 50%;
+                border: rem(1) solid transparent;
+                font-family: var(--Lexend);
+                font-weight: 400;
+                font-size: rem(20);
+                line-height: normal;
+                color: var(--black);
+                text-decoration: none;
+                transition: var(--bezier);
+                @include media-breakpoint-up(lg) {
+                    width: rem(40);
+                    height: rem(40);
+                    font-size: rem(38);
+                    line-height: rem(28);
+                }
+                i {
+                    color: var(--black);
+                    transition: var(--bezier);
+                }
+            }
+            &.current {
+                > * {
+                    font-size: rem(30);
+                    color: var(--white);
+                    @include media-breakpoint-up(lg) {
+                        font-size: rem(50);
+                    }
+                }
+            }
+            .prev,
+            .next {
+                font-size: 0;
+                background-color: var(--black);
+                &:hover {
+                    border-color: var(--black);
+                    background-color: transparent;
+                    i {
+                        color: var(--black);
+                    }
+                }
+                i {
+                    color: var(--white);
+                }
+            }
+            .prev {
+                @include media-breakpoint-up(lg) {
+                    margin-right: rem(30);
+                }
+            }
+            .next {
+                @include media-breakpoint-up(lg) {
+                    margin-left: rem(30);
+                }
+            }
+        }
+    }
+}

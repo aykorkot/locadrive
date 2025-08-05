@@ -1,0 +1,96 @@
+// =========================================
+// inputs
+// =========================================
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea,
+select {
+    &, &.form-control {
+        background-color: transparent !important;
+        display: block;
+        width: 100%;
+        height: rem(48) !important;
+        border: rem(1) solid var(--black) !important;
+        border-radius: 0 !important;
+        margin: 0;
+        padding: rem(10) !important;
+        box-shadow: none !important;
+        outline: none !important;
+        transition: var(--bezier);
+        font-weight: 300;
+        color: var(--black);
+        line-height: normal;
+
+        &::placeholder {
+            color: var(--gray-5);
+        }
+
+        &.disabled,
+        &[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &.error {
+            border-color: var(--red) !important;
+        }
+    }
+}
+
+textarea {
+    min-height: rem(230);
+    resize: none;
+}
+
+input {
+    accent-color: var(--black);
+}
+
+.custom-radio {
+    border-color: var(--black);
+    input[type=radio] {
+        &:checked {
+            + span {
+                background-color: var(--black);
+            }
+        }
+    }
+}
+
+div.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    color: var(--red);
+    font-size: rem(12);
+}
+
+.bootstrap-filestyle {
+    .group-span-filestyle {
+        .btn {
+            height: 100% !important;
+        }
+    }
+}
+
+.input-group {
+    .input-group-btn {
+        .btn {
+            white-space: nowrap;
+        }
+    }
+}
